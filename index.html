@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waffle Station - Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(to right, #3E2723, #6D4C41); /* Dark Chocolate Gradient */
+            color: #FAF3E0; /* Light beige text for contrast */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .section-container {
+            padding: 20px;
+        }
+
+        /* Animated Text */
+        .animated-text {
+            font-size: 3em;
+            font-weight: bold;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Slideshow Styles */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Button Hover */
+        .btn {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #6D4C41; /* Medium chocolate color */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #3E2723; /* Dark chocolate on hover */
+            transform: scale(1.05);
+        }
+
+        /* Back Button */
+        .back-btn {
+            padding: 10px 20px;
+            background-color: #EFEBE9;
+            color: #3E2723;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .back-btn:hover {
+            background-color: #D7CCC8;
+        }
+
+        /* Customer Pictures Section */
+        .customer-container {
+            background: #EFEBE9;
+            padding: 20px;
+        }
+
+        .customer-container h2 {
+            color: #3E2723; /* Dark chocolate for headings */
+        }
+
+        .customer-pic {
+            width: 100%;
+            height: 200px;
+            background-color: #BCAAA4; /* Light brown placeholder */
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+
+        .customer-container .mySlides {
+            display: block;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 18px;
+            transform: translate(0, -50%);
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Menu Items Hover */
+        .menu-box {
+            background-color: #EFEBE9; /* Soft beige background for contrast */
+            width: 100%;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-banner {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- First Page - Welcome Section -->
+    <div class="welcome-container section-container">
+        <img src="logo.png" alt="Waffle Station Logo" class="logo">
+        
+        <h1 class="animated-text">Welcome to Waffle Station!</h1>
+        <p>Explore our delicious waffles and refreshing milkshakes. A treat that makes your day sweeter!</p>
+
+
+        
+        <button class="btn" onclick="showDrinks()">See Our Drinks</button>
+        <button class="btn" onclick="showFood()">See Our Waffles</button>
+
+
+
+    </div>
+    
+
+
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+<!-- Message Us Button -->
+<div class="message-us-container">
+    <a href="https://www.facebook.com/messages/t/475933542266123" target="_blank" class="message-us-btn">
+        Chat with Us to Place Your Order
+    </a>
+</div>
+
+
+<!-- Second Page - Customer Pictures Section -->
+<!-- Gallery Section -->
+<div class="gallery-container section-container">
+    <h2>Waffles & Shakes: A Gallery of Flavors!</h2>
+    <div class="gallery-grid">
+        <img src="images/pic1.jpg" alt="Pink paradise shake with rainbow special" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic2.jpg" alt="Nutty Oreo bliss (premium)" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic3.jpg" alt="Nutty Oreo bliss (premium)" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic4.jpg" alt="Pink paradise shake with crushed Oreo" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic5.jpg" alt="Mango Graham bliss with De Caramel" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic6.jpg" alt="Pink paradise shake with rainbow Special" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic7.jpg" alt="Mango Graham and creme oreo De Original shake" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic8.jpg" alt="Premium waffle, mango graham and strawberry Special" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic9.jpg" alt="" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic10.jpg" alt="" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic11.jpg" alt="Waffle strawberry special and premium nutty oreo" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic12.jpg" alt="Mango Graham De Caramel and Strawberry Special" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic13.jpg" alt="Creme Oreo Cookie Shakes" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic14.jpg" alt="Mango Graham De Caramel" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic15.jpg" alt="Mango Graham De Caramel" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic16.jpg" alt="Pink Paradise" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic17.jpg" alt="Pink paradise with Oreo" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic18.jpg" alt="Mango Graham De Original" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic19.jpg" alt="Pink Paradise Special" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic20.jpg" alt="Pink Paradise Special and mango Graham" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic21.jpg" alt="Premium Waffle" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic22.jpg" alt="Waffle with Nutella" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic23.jpg" alt="Our Stall" class="gallery-item" onclick="openModal(this)">
+        <img src="images/pic24.jpg" alt="Our Stall" class="gallery-item" onclick="openModal(this)">
+    </div>
+</div>
+
+<!-- Modal for Enlarged Image -->
+<div id="imageModal" class="modal hidden">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+</div>
+
+<script>
+    // Modal open and close functions
+    function openModal(img) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        var caption = document.getElementById("caption");
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        caption.innerHTML = img.alt;
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("imageModal");
+        modal.style.display = "none";
+    }
+</script>
+
+</div>
+<script src="script.js"></script>
+</body>
+
+<!-- Third Page - Drinks Section -->
+<div class="menu-container drinks-container hidden section-container">
+    <h2>Our Milkshakes</h2>
+    <div class="menu-items-container">
+        <!-- Menu Item: Pink Paradise Shake -->
+        <div class="menu-item">
+            <div class="menu-box">
+                <img src="banner1.png" alt="Pink Paradise Shake" class="menu-banner">
+            </div>
+            <h3>New! Pink Paradise Shake</h3>
+            <p>₱ 55.00</p>
+        </div>
+        <!-- Menu Item: Crème Oreo Cookie Shake -->
+        <div class="menu-item">
+            <div class="menu-box">
+                <img src="banner2.png" alt="Crème Oreo Cookie Shake" class="menu-banner">
+            </div>
+            <h3>Best Seller: Crème Oreo Cookie Shake</h3>
+            <p>₱ 55.00</p>
+        </div>
+        <!-- Menu Item: Mango Graham Bliss Shake -->
+        <div class="menu-item">
+            <div class="menu-box">
+                <img src="banner3.png" alt="Mango Graham Bliss Shake" class="menu-banner">
+            </div>
+            <h3>Best Seller: Mango Graham Bliss Shake</h3>
+            <p>₱ 55.00</p>
+        </div>
+        <!-- New Shake: Ube Shake -->
+        <div class="menu-item">
+            <div class="menu-box">
+                <img src="ube-shake.png" alt="Ube Shake" class="menu-banner">
+            </div>
+            <h3>Ube Shake</h3>
+            <p>₱ 45.00</p>
+        </div>
+        <!-- New Shake: Avocado Shake -->
+        <div class="menu-item">
+            <div class="menu-box">
+                <img src="avocado-shake.png" alt="Avocado Shake" class="menu-banner">
+            </div>
+            <h3>Avocado Shake</h3>
+            <p>₱ 45.00</p>
+        </div>
+        <!-- New Shake: Choco Fudge Shake -->
+        <div class="menu-item">
+            <div class="menu-box">
+                <img src="choco-fudge-shake.png" alt="Choco Fudge Shake" class="menu-banner">
+            </div>
+            <h3>Choco Fudge Shake</h3>
+            <p>₱ 45.00</p>
+        </div>
+    </div>
+    <button class="back-btn" onclick="goBackToWelcome()">Back</button>
+</div>
+
+<!-- Fourth Page - Waffle Section -->
+<div class="menu-container food-container hidden section-container">
+    <h2>Our Waffles</h2>
+    <div class="menu-items-container">
+        <div class="menu-item">
+            <div class="menu-box">
+                <img src="waffle1.png" alt="Nutty Oreo Bliss Waffle" class="menu-banner">
+            </div>
+            <h3>Nutty Oreo Bliss (Premium)</h3>
+            <p>₱ 60.00</p>
+        </div>
+        <div class="menu-item">
+            <div class="menu-box">
+                <img src="waffle2.png" alt="Banana Split Waffle" class="menu-banner">
+            </div>
+            <h3>Strawberry Special</h3>
+            <p>₱ 55.00</p>
+        </div>
+        <div class="menu-item">
+            <div class="menu-box">
+                <img src="waffle3.png" alt="Choco Hazelnut Waffle" class="menu-banner">
+            </div>
+            <h3>Classic waffle w/ syrup</h3>
+            <p>₱ 45.00</p>
+        </div>
+    </div>
+    <button class="back-btn" onclick="goBackToWelcome()">Back</button>
+</div>

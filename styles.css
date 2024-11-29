@@ -1,0 +1,370 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #5c4033;
+    padding: 0;
+    line-height: 1.6;
+    background: linear-gradient(45deg, #d4c2a7, #5c4033, #d4c2a7, #5c4033);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Welcome Section */
+.welcome-container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #d4c2a7; /* Front page color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: #5c4033;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #7a3e19;
+    margin: 15px 0;
+}
+
+/* Logo */
+.logo {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.next-btn {
+    background-color: #5c4033; /* Chocolate color */
+    color: rgba(224, 199, 150, 0.381);
+    padding: 14px 28px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.next-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px #0000004d;
+    background-color: #4a2a1d;
+}
+
+/* Menu Section */
+.menu-container {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #5c4033; /* Chocolate color */
+}
+
+.menu-title { 
+    font-size: 2.5rem;
+    color: #d4c2a7; /* Matching the front page */
+    margin-bottom: 40px;
+}
+
+/* Menu Items */
+.menu-items-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    width: 300px;
+    text-align: center;
+    background-color: #f6e7d1;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.10s ease, background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: #e0c9a6;
+}
+
+.menu-banner {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    font-size: 1.4rem;
+    color: #5c4033;
+    margin-bottom: 5px;
+}
+
+/* text inside the peso */
+.menu-item p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #5c4033;
+}
+
+/* Contact Section */
+.contact-container {
+    padding: 30px 20px;
+    background-color: #d4c2a7; /* Front page color */
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 2rem;
+    color: #5c4033;
+    margin-bottom: 20px;
+}
+
+.send-message-btn {
+    background-color: #5c4033; /* Chocolate color */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.send-message-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #4a2a1d;
+}
+
+/* Customer Pictures Section */
+.customer-container {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.customer-container h2 {
+    font-size: 2.5rem;
+    color: #8e624d;
+    margin-bottom: 40px;
+}
+
+/* Gallery container styling */
+.gallery-container {
+    padding: 20px;
+    background-color: #f8f1e7; /* Light background to match the chocolate theme */
+}
+
+.gallery-container h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #4a2c1d; /* Dark brown color */
+    margin-bottom: 20px;
+}
+
+/* Image Grid with 4 items per row */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+    gap: 20px;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1200px; /* Limits the max width of the gallery */
+}
+
+/* Individual gallery item */
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the grid cell without distortion */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer; /* Adds a pointer when hovering over the image */
+}
+
+/* Hover effect for images */
+.gallery-item:hover {
+    transform: scale(1.1); /* Zooms in the image slightly on hover */
+}
+
+/* Modal styling */
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    padding-top: 60px;
+    text-align: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+#caption {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* Close button for modal */
+.close {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #ddd;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* 1 image per row on small screens */
+    }
+}
+
+
+/* Back Button */
+.back-btn {
+    background-color: #5c4033; /* Chocolate color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #4a2a1d;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+    transform: translate(0, -50%);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Button to show drinks */
+.btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #5c4033; /* Chocolate color */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #4a2a1d;
+}
+
+/* Keyframes for the background gradient animation */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.message-us-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.message-us-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #8B0000, #B22222); /* Dark Red Gradient */
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.message-us-btn:hover {
+    background: linear-gradient(135deg, #B22222, #FF6347); /* Lighter Gradient on Hover */
+    transform: scale(1.05);
+}
+
+.message-us-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
